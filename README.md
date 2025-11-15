@@ -75,3 +75,8 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 - [Railway Documentation](https://docs.railway.app/)
 - [Vercel Documentation](https://vercel.com/docs)
 - [Netlify Documentation](https://docs.netlify.com/) 
+
+Building on the communication app from week 6, I managed to come up with a frontend and backend deployment. 
+For the Backend, I deployed on render. https://deployment-and-devops-essentials-noem.onrender.com/
+
+For the Frontend, I deployed on versel. 
