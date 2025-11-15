@@ -77,6 +77,8 @@ Your work will be automatically submitted when you push to your GitHub Classroom
 - [Netlify Documentation](https://docs.netlify.com/) 
 
 Building on the communication app from week 6, I managed to come up with a frontend and backend deployment. 
-For the Backend, I deployed on render. https://deployment-and-devops-essentials-noem.onrender.com/
+For the Backend, I deployed on render. https://deployment-and-devops-essentials-noem.onrender.com/![Screenshot 2025-11-15 182247](https://github.com/user-attachments/assets/32bb4395-107e-43dd-954a-705d6e68abc5)
+
+
 
 For the Frontend, I deployed on versel. 
