@@ -1,0 +1,227 @@
+/* client/src/index.css */
+
+:root {
+  --bg-color: #f0f2f5;
+  --panel-bg: #ffffff;
+  --header-bg: #007bff;
+  --header-text: #ffffff;
+  --user-list-bg: #f7f7f7;
+  --my-message-bg: #dcf8c6;
+  --other-message-bg: #ffffff;
+  --system-message-bg: #e1f5fe;
+  --border-color: #e0e0e0;
+  --text-color: #111;
+  --text-color-light: #555;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Login Page --- */
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.login-form {
+  background: var(--panel-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.login-form h2 {
+  margin-top: 0;
+}
+.login-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.login-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--header-bg);
+  color: var(--header-text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* --- Chat Page --- */
+.chat-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--panel-bg);
+  box-shadow: var(--shadow);
+}
+
+.chat-header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.chat-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.disconnect-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chat-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* --- User List --- */
+.user-list {
+  width: 250px;
+  background: var(--user-list-bg);
+  border-right: 1px solid var(--border-color);
+  padding: 1rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+.user-list h3 {
+  margin-top: 0;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+.user-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.user-list li {
+  padding: 0.5rem 0;
+  color: var(--text-color-light);
+}
+.user-list li.current-user {
+  font-weight: bold;
+  color: var(--header-bg);
+}
+
+/* --- Chat Content --- */
+.chat-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* --- Chat Window --- */
+.chat-window {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background: var(--bg-color);
+}
+.message {
+  display: flex;
+  margin-bottom: 0.75rem;
+}
+.message-bubble {
+  padding: 0.5rem 1rem;
+  border-radius: 18px;
+  max-width: 70%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.message-sender {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--header-bg);
+  margin-bottom: 0.25rem;
+}
+.message-text {
+  word-wrap: break-word;
+}
+.message-time {
+  font-size: 0.7rem;
+  color: var(--text-color-light);
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+.my-message {
+  justify-content: flex-end;
+}
+.my-message .message-bubble {
+  background: var(--my-message-bg);
+  border-bottom-right-radius: 4px;
+}
+
+.other-message {
+  justify-content: flex-start;
+}
+.other-message .message-bubble {
+  background: var(--other-message-bg);
+  border-bottom-left-radius: 4px;
+}
+
+.system-message {
+  font-style: italic;
+  text-align: center;
+  color: var(--text-color-light);
+  font-size: 0.85rem;
+}
+
+/* --- Typing & Input --- */
+.typing-indicator {
+  padding: 0 1rem;
+  height: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-color-light);
+}
+
+.message-input-form {
+  display: flex;
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+  background: var(--panel-bg);
+}
+.message-input-form input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  margin-right: 0.5rem;
+}
+.message-input-form button {
+  padding: 0.75rem 1.5rem;
+  background: var(--header-bg);
+  color: var(--header-text);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
